@@ -1,0 +1,54 @@
+*{
+    background-color: beige;
+    font-family: monospace;
+    margin: 0;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: .3rem .8rem;
+    margin: 1rem;
+}
+
+li button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    padding: 0.3rem 0.5rem;
+    border-radius: .5rem;   
+}
+
+input{
+    background-color: white;
+    padding: .3rem .5rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: .5rem;
+    margin: .3rem .8rem;
+    transition: border 0.2s ease;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid blueviolet;
+}
+
+.primary{
+    background-color: violet;
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem .5rem;
+    margin: .3rem .5rem;
+    box-shadow: 0 0 .3rem black;
+    transition: all .2s ease-out;
+}
+
+.primary:hover{
+    box-shadow: 0 0 .5rem rgb(0, 0, 0);
+    background-color: rgb(248, 157, 248);
+}
+.primary:active{
+    transform: translateY(2px);
+}
