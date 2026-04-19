@@ -1,0 +1,11 @@
+<div class="main">
+  <h1>***** ***** Parent to Child Data Passing ***** *****</h1>
+  <!-- sending parent data to the child, ([user], [meme]) -->
+  <app-child [user]="userName()" [meme]="meme()"></app-child>
+  <div style="background-color: beige;">
+    <h1>***** ***** Child to Parent Data Passing ***** *****</h1>
+    <!-- send child data to the Parent, (sendMobile) as an event -->
+    <app-child-two (mobile)="receiveMobile($event)"></app-child-two>
+    <h2>##### DISPLAYING DATA COMING FROM CHILD TO PARENT: {{mobileNo()}}</h2>
+  </div>
+</div>

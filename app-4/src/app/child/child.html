@@ -1,0 +1,13 @@
+<h3>from parent component: {{user}} {{meme}}</h3>
+<p><b>1. define @Input in child component(.ts)</b></p>
+<p><b>@Input() user: string | undefined;</b></p>
+<p><i style="color: red;">it may possible that 'user' is not defined in parent, hence string | undefined</i></p>
+<br>
+<p><b>2. Pass data from parent component(.html)</b></p>
+<p><b>&lt;app-child [user]= "userName"&gt;&lt;/app-child&gt;</b></p>
+<p><i style="color: red;">here, userName is the variable defined in parent(.ts)</i></p><br>
+
+<p><b>3. Define the data in the parent component</b></p>
+<p><b>userName="pranav Kumar"</b></p>
+
+<br>

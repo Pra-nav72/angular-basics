@@ -1,0 +1,35 @@
+<div>
+    <h3>In Angular, sending data from a child component to
+        a parent component is typically done using event binding
+        with @Output and EventEmitter.
+    </h3>
+    <li>The child component emits an event</li>
+    <li>parent component listens to that event</li>
+    <br><br>
+    
+    <h3>inside Child Component(.ts)</h3>
+    <p>
+        @Output() <span style="color: blueviolet;">dataEvent</span> = new EventEmitter&lt;string&gt;();<br><br>
+        <span style="color: brown;">sendData()</span> &lbrace;<br>
+            this.<span style="color: blueviolet;">dataEvent</span>.emit('Hello from Child!');<br>
+        &rbrace;
+    </p>
+    <h3>inside Child Component(.html)</h3>
+    <p>
+        <span style="color: red;"><i>to trigger the sendData(), need button</i></span><br>
+        &lt;button (click)="<span style="color: brown;">sendData()</span>($event)"&gt;send to parent&lt;/button&gt;<br>
+    </p><br>
+    <h3>inside Parent Component(.html)</h3>
+    <p>
+        &lt;app-child (<span style="color: blueviolet;">dataEvent</span>)="<span style="color: deeppink;">receiveData</span>($event)"&gt;&lt;/app-child&gt;<br>
+        &lt;p&gt; &lbrace; message &rbrace; &lt;/p&gt;
+    </p>
+    <h3>inside Parent Component (.ts)</h3>
+    <p>
+        message=' ';<br>
+        <span style="color: deeppink;">receiveData</span>(data: string)&lbrace;<br>
+        this.message = data;
+        <br>&rbrace;
+    </p>
+    <button (click)="sendMobile()">Send Mobile to Parent</button>
+</div>
