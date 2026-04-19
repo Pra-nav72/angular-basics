@@ -58,6 +58,19 @@
 </div>
 
 <div class="custom-pipes">
+  <h1 style="color: rgb(240, 150, 168);">custom pipe used with arg 4 (trim upto 4 character):
+     {{address() | trimTexts:4 | uppercase}}</h1>
+     <p>used multiple pipes trimTexts | uppercase == return type of both pipes should be same</p>
+  <h1 style="color: rgb(240, 150, 168);">custom pipe used no arg: {{address() | trimTexts}}</h1>
   <h3>Custom Pipes</h3>
   <h3 style="color: white;">>>> ng generate pipe custom-pipe/trimText ([folder/file]name)</h3>
+  <h2>1. after creating, import the pipe to the target component(.ts)</h2>
+  <p>to use the pipe, name of the pipe will be written in,
+     the pipe(trimText) files @Pipe(name: <span style="color: rgb(255, 221, 221);">trimText</span>)</p>
+  <h2>2. write the custom logic of the pipe inside transform method & return it</h2>
+
+  <br><br>
+  <h3>currency Converter custom Pipe</h3>
+  <h2>currencyConverter(amount*90) = {{amount() | currencyConverter | currency:'INR'}}</h2>
+  <h2>currencyConverter:10 (amount*10)= {{amount() | currencyConverter:10 | currency:'INR'}}</h2>
 </div>
