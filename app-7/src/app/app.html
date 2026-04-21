@@ -39,5 +39,26 @@
   <li><a routerLink="/about">About</a></li>
 </ul>
 <hr>
+<hr>
+<div style="background-color: beige;">
+
+  <h2>Page Not Found Error:</h2>
+  <h3>1. create & design the component for page not found</h3>
+  <h3>2. register it after all the component(lowest line) in app.routes.ts file</h3>
+  <h3>it should be look like: 
+    &lbrace;page:" <span style="color: red;">**</span> ",
+     component:pageNotFound&rbrace;</h3>
+  <h3>'**' means on any url request go to this corresponding component only. 
+    <h2 style="font-size: larger; color: rgb(8, 148, 101);">That's why we use it at the last of the route description</h2></h3>
+</div>
+<div style="background-color: beige;">
+
+  <h2>To redirect (redirectTo):</h2>
+  <h3>to redirect, after any specific route url(lets say, /pranav), 
+      in the app.routes.ts, &lbrace;page:"/pranav",
+      <span style="color: red;">redirectTo: '&lt;url(/home, /about...etc)&gt;'</span>
+     &rbrace;
+  </h3>
+</div>
 <p>now you can see output based on url</p>
 <router-outlet></router-outlet>
