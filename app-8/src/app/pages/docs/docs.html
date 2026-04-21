@@ -1,0 +1,20 @@
+<h1>About APP:</h1>
+<hr>
+<h2>In this we will see how to handle parameters' query</h2>
+<h3>*****  METHOD:1 *****</h3>
+<h3>1. created a button on home page to go to about page</h3>
+<h3>2. attributes: routerLink="/profile" - go to profile page</h3>
+<h3>3. add parameters: [queryParams]=&lbrace;id:1, name:pranav&rbrace;</h3>
+<h3>*****  METHOD:2 *****</h3>
+<h3>1. created a button on home page to go to about page</h3>
+<h3>2. attributes: (click)="goToProfile()" - define the method in .ts</h3>
+<h3>3. define constructor(public route:Router)&lbrace;&rbrace;</h3>
+<h3>3. define goToProfile()&lbrace;<br>
+    this.route.navigate(['profile'], &lbrace; queryParams: &lbrace;here query properties&rbrace;&rbrace;)
+</h3>
+<p>-------------HOW TO HANDLE PARAMS IN PROFILE---------------</p>
+<h3>4. we have to use activatedRoutes: <br>
+    create constructor(public route:ActivatedRoutes)&lbrace;&rbrace;</h3>
+<h3>5. define a method 'ngOnInit()', this method gets call implicitly when website loads</h3>
+<h3>6. inside the method, this.route.queryParams.subscribe((params)=>cosole.log(parmas))</h3>
+<h4>*** subscribe() gives a callback function. </h4>

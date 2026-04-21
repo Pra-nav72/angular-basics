@@ -1,0 +1,10 @@
+<h1>HOME PAGE</h1>
+<br><hr><br>
+<button (click)="goToAbout()"
+>go to profile: attribute (click)</button>
+
+<!-- sending query -->
+<button 
+ routerLink="/profile"
+ [queryParams]="user[0]"
+>go to profile: with attribute(queryParams)</button>
