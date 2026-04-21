@@ -1,0 +1,9 @@
+<hr>
+<h1>HOME</h1>
+<hr><hr>
+<h2>user details:</h2>
+<ul>
+    @for(user of userData(); track user.id){
+        <li><a [routerLink]="['/users', user.id]">{{user.name}}</a></li><hr>
+    }
+</ul>
