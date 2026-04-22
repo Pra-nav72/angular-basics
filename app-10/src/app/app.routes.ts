@@ -6,7 +6,10 @@ import { Settings } from './pages/settings/settings';
 
 export const routes: Routes = [
     {path:"", component:Home},
-    {path:"profile", component:Profile, 
+
+    // LAZY LOADING the following component(profile): page will load when user request
+    // {path:"profile", component:Profile, 
+    {path:"profile", loadComponent:()=>import('./pages/profile/profile').then((c)=>c.Profile), 
         children:[
         // select personal-details by default when on profile page
         /* 
@@ -15,7 +18,9 @@ export const routes: Routes = [
         */
         {path:"", redirectTo:"personal-details", pathMatch:"full"},
         {path:"personal-details", component:PersonalDetails},
-        {path:"settings", component:Settings},
+        // lazy loading settings.
+        // {path:"settings", component:Settings},
+        {path:"settings", loadComponent:()=>import('./pages/settings/settings').then((c)=>c.Settings)},
     ]},
 
 ];
