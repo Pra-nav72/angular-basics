@@ -1,0 +1,7 @@
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30rem;
+    list-style-type: none;
+    font-size: larger;
+}
