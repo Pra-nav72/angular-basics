@@ -2,10 +2,18 @@
 <hr><hr>
 
 <!-- showing the titel of every product -->
-@if(productsData().length > 0){
-    <ul>
-        @for(data of productsData(); track data.id ){
-            <li>{{data.title}}</li>
-        }
-    </ul>
-}
+
+<ul>
+    @for(data of productsData(); track data.id ){
+        <li>
+            <a class="product-link" [routerLink]="['/product-details', data.id]">
+                <img [src]="data.thumbnail" alt="{{data.title}}" />
+                <div class="product-info">
+                    <span class="product-title">{{data.title}}</span>
+                    <span class="product-price">₹{{data.price}}</span>
+                    <span class="product-description">{{data.description}}</span>
+                </div>
+            </a>
+        </li>
+    }
+</ul>
